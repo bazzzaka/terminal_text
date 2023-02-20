@@ -19,29 +19,29 @@ class TerminalText:
 
     def header(self):
         """Print purple text """
-        print(f'{self._DATETIME} {self._HEADER}{self._TEXT} {self._END}')
+        print(f'{self._DATETIME} {self._HEADER} - INFO - {self._TEXT} {self._END}')
 
-    def blue(self):
+    def tips(self):
         """Print blue text """
-        print(f'{self._DATETIME} {self._BLUE}{self._TEXT} \n{self._END}')
+        print(f'{self._DATETIME} {self._GREEN} - TIPS - {self._END}{self._BLUE}{self._TEXT} \n{self._END}')
 
-    def cyan(self):
+    def recommend(self):
         """Print cyan text """
-        print(f'{self._DATETIME} {self._CYAN}{self._TEXT}{self._END}')
+        print(f'{self._DATETIME} {self._YELLOW} - RECOMMEND - {self._END}{self._CYAN}{self._TEXT}{self._END}')
 
-    def green(self):
+    def info(self):
         """Print green text """
-        print(f'{self._DATETIME} {self._GREEN}{self._TEXT}{self._END}')
+        print(f'{self._DATETIME} {self._GREEN} - INFO - {self._TEXT}{self._END}')
 
     def warning(self):
         """Print yellow text """
-        print(f'{self._DATETIME} {self._YELLOW}{self._TEXT}{self._END}')
+        print(f'{self._DATETIME} {self._YELLOW} - WARNING - {self._TEXT}{self._END}')
 
     def fail(self):
         """Print red text """
-        print(f'{self._DATETIME} {self._FAIL}{self._TEXT}{self._END}')
+        print(f'{self._FAIL}"CRITICAL ==>"{self._END} \n{self._DATETIME} \n {self._FAIL}{self._TEXT}{self._END}')
 
-    def bold(self):
+    def text_error(self):
         """Print bold text """
         print(f'{self._DATETIME} {self._BOLD}{self._TEXT}{self._END}')
 
@@ -56,6 +56,9 @@ class TerminalText:
         send_to_slack(message=message, error=error_string)
         text = 'An error was detected! \nThe bug results were sent to the developers, we will fix the problem and contact you shortly'
         print(f'{self._DATETIME} {self._GREEN}{text}{self._END}')
+
+    def report_to_discord(self, error):
+        pass
 
 
 if __name__ == '__main__':

@@ -5,7 +5,7 @@ from slack import WebClient
 
 class SlackMessenger:
 
-    def __init__(self,message, error):
+    def __init__(self, message, error):
         self.channel = os.getenv('SLACK_CHANNEL')
         self.message = message
         self.error = error
@@ -52,3 +52,16 @@ def send_to_slack(message, error):
 
     # Post the onboarding message in Slack
     slack_web_client.chat_postMessage(**message)
+
+
+class DiscordServer:
+    """This is a discord bot,
+    he will be able to take message
+    and send data for server.
+    Communicate with the customer.
+    Has a behavioral role roles.
+    Need """
+
+
+    def __init__(self):
+        pass
