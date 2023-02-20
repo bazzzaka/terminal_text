@@ -6,7 +6,8 @@ from slack import WebClient
 class SlackMessenger:
 
     def __init__(self, message, error):
-        self.channel = os.getenv('SLACK_CHANNEL')
+        load_dotenv()
+        self.channel = os.getenv('SLACK_CHANEL')
         self.message = message
         self.error = error
 

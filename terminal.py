@@ -58,7 +58,7 @@ class TerminalText:
         print(f'{self._DATETIME} {self._GREEN}{text}{self._END}')
 
     def report_to_discord(self, error):
-        pass
+        """Report to discord server add later"""
 
 
 if __name__ == '__main__':
