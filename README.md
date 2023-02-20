@@ -1,6 +1,6 @@
 # Terminal Text
 
-![logo](/terminal_text/img.png)
+![logo](https://github.com/bazzzaka/terminal_text/blob/main/img.png)
 
 **Terminal Text** repositories,   
 which allows you to output text with different stylized colors in the terminal.   
@@ -13,7 +13,7 @@ some_data_to_print = 'DATA. It`s can be anything data.'
 TerminalText(some_data_to_print).info()
 ```  
 Console output:
-![logo](/terminal_text/example.png)
+![logo](https://github.com/bazzzaka/terminal_text/blob/main/example.png)
 
 It contains methods for output text with certain colors and styles, such as   
 |Function name |Description          |
